@@ -1,0 +1,3510 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A.S Country | Loja Country em São Jerônimo da Serra</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo">
+          <span class="a.s">A.S</span><span class="country">COUNTRY</span>
+        </div>
+
+        <div class="nav-links">
+          <a
+            href="#"
+            onclick="
+              showPage('home');
+              return false;
+            "
+            class="active"
+          >
+            Início
+          </a>
+          <a
+            href="#"
+            onclick="
+              showPage('produtos');
+              return false;
+            "
+          >
+            Produtos
+          </a>
+          <a
+            href="#"
+            onclick="
+              showPage('sobre');
+              return false;
+            "
+          >
+            Sobre
+          </a>
+          <a
+            href="#"
+            onclick="
+              showPage('contato');
+              return false;
+            "
+          >
+            Contato
+          </a>
+          <a href="https://wa.me/5543999056364" target="_blank" class="nav-cta">
+            WhatsApp
+          </a>
+        </div>
+
+        <div
+          class="hamburger"
+          onclick="document.getElementById('mm').classList.toggle('open')"
+        >
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      class="mobile-menu"
+      id="mm"
+      onclick="if (event.target.id === 'mm') this.classList.remove('open');"
+    >
+      <span
+        class="close-btn"
+        onclick="document.getElementById('mm').classList.remove('open')"
+        >✕</span
+      >
+      <div class="mobile-menu-content">
+        <a href="#" onclick="return mobileNav('home');">Início</a>
+        <a href="#" onclick="return mobileNav('produtos');">Produtos</a>
+        <a href="#" onclick="return mobileNav('sobre');">Sobre</a>
+        <a href="#" onclick="return mobileNav('contato');">Contato</a>
+        <a
+          href="https://wa.me/5543999056364"
+          target="_blank"
+          class="menu-whatsapp-btn"
+          onclick="document.getElementById('mm').classList.remove('open')"
+        >
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- PAGE: HOME -->
+    <div id="page-home" class="page active">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-stripe"></div>
+        <div class="hero-stripe hero-stripe--2"></div>
+
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <div class="line"></div>
+            <span>Loja Country Especializada</span>
+            <div class="line"></div>
+          </div>
+
+          <div class="logo-container">
+            <img
+              src="uploads/logo.png"
+              alt="AS Country"
+              class="hero-logo"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+
+          <h1>
+            <span class="gold">A.S</span><br />
+            <span class="outline">COUNTRY</span>
+          </h1>
+
+          <p class="hero-sub">
+            Loja country especializada em botas, chapéus, roupas e
+            acessórios.<br />
+            Qualidade, tradição e atendimento direto em São Jerônimo da Serra.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              href="#"
+              onclick="
+                showPage('produtos');
+                return false;
+              "
+              class="btn btn--gold"
+            >
+              <i class="fas fa-shopping-bag"></i>
+              Ver Produtos
+            </a>
+            <a
+              href="https://wa.me/5543999056364"
+              target="_blank"
+              class="btn btn--outline"
+            >
+              <i class="fab fa-whatsapp"></i>
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="scroll-hint">
+          <span>Rolar</span>
+          <div class="arrow"></div>
+        </div>
+      </section>
+
+      <!-- DESTAQUES -->
+      <section class="section highlights-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="label">
+              <div class="line"></div>
+              <span>O Melhor da Loja</span>
+            </div>
+            <h2>DESTAQUES</h2>
+            <p>Confira nossos produtos mais procurados</p>
+          </div>
+
+          <div class="highlights-carousel-wrapper reveal">
+            <button
+              class="carousel-btn prev"
+              onclick="moveHighlightCarousel(-1)"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="highlights-carousel">
+              <div class="highlights-track" id="highlightsTrack">
+                <!-- Card 1: Botas -->
+                <div class="highlight-card">
+                  <div
+                    class="highlight-card-inner"
+                    onclick="
+                      showPage('produtos');
+                      filterCategory('botas');
+                    "
+                  >
+                    <div class="highlight-image">
+                      <img
+                        src="uploads/Botas/bota destaque.jpeg"
+                        alt="Bota Texana"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="highlight-overlay"></div>
+                    <div class="highlight-content">
+                      <div class="highlight-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                      </div>
+                      <h3>Botas Texana</h3>
+                      <p>Couro legítimo de alta qualidade</p>
+                      <span class="highlight-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Chapéus -->
+                <div class="highlight-card">
+                  <div
+                    class="highlight-card-inner"
+                    onclick="
+                      showPage('produtos');
+                      filterCategory('chapeus');
+                    "
+                  >
+                    <div class="highlight-image">
+                      <img
+                        src="uploads/Chap%C3%A9us/chapeu-pralana.png"
+                        alt="Chapéus Country"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="highlight-overlay"></div>
+                    <div class="highlight-content">
+                      <div class="highlight-icon">
+                        <i class="fas fa-hat-cowboy"></i>
+                      </div>
+                      <h3>Chapéus Country</h3>
+                      <p>Tradição e estilo autêntico</p>
+                      <span class="highlight-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: Camisas -->
+                <div class="highlight-card">
+                  <div
+                    class="highlight-card-inner"
+                    onclick="
+                      showPage('produtos');
+                      filterCategory('camisas');
+                    "
+                  >
+                    <div class="highlight-image">
+                      <img
+                        src="uploads/Camisas/camisa king farm - destaque.jpeg"
+                        alt="Camisas Xadrez"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="highlight-overlay"></div>
+                    <div class="highlight-content">
+                      <div class="highlight-icon">
+                        <i class="fas fa-tshirt"></i>
+                      </div>
+                      <h3>Camisas Xadrez</h3>
+                      <p>100% algodão, conforto e qualidade</p>
+                      <span class="highlight-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4: Cintos -->
+                <div class="highlight-card">
+                  <div
+                    class="highlight-card-inner"
+                    onclick="
+                      showPage('produtos');
+                      filterCategory('cintos');
+                    "
+                  >
+                    <div class="highlight-image">
+                      <img
+                        src="uploads/Acessórios/cinta.png"
+                        alt="Cintos de Couro"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="highlight-overlay"></div>
+                    <div class="highlight-content">
+                      <div class="highlight-icon">
+                        <i class="fas fa-gem"></i>
+                      </div>
+                      <h3>Cintos de Couro</h3>
+                      <p>Artesanais com fivelas exclusivas</p>
+                      <span class="highlight-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5: Calças -->
+                <div class="highlight-card">
+                  <div
+                    class="highlight-card-inner"
+                    onclick="
+                      showPage('produtos');
+                      filterCategory('calcas');
+                    "
+                  >
+                    <div class="highlight-image">
+                      <img
+                        src="uploads/Cal%C3%A7as/Cal%C3%A7a%20King_Farm-destaque.jpeg"
+                        alt="Calças Jeans"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="highlight-overlay"></div>
+                    <div class="highlight-content">
+                      <div class="highlight-icon">
+                        <i class="fas fa-person"></i>
+                      </div>
+                      <h3>Calças Jeans</h3>
+                      <p>Modelagem country tradicional</p>
+                      <span class="highlight-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6: Acessórios -->
+                <div class="highlight-card">
+                  <div
+                    class="highlight-card-inner"
+                    onclick="
+                      showPage('produtos');
+                      filterCategory('acessorios');
+                    "
+                  >
+                    <div class="highlight-image">
+                      <img
+                        src="uploads/Acessórios/fivela long horn.jpeg"
+                        alt="Acessórios Country"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="highlight-overlay"></div>
+                    <div class="highlight-content">
+                      <div class="highlight-icon">
+                        <i class="fas fa-ring"></i>
+                      </div>
+                      <h3>Acessórios</h3>
+                      <p>Fivelas, carteiras e muito mais</p>
+                      <span class="highlight-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-btn next"
+              onclick="moveHighlightCarousel(1)"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+              <span
+                class="indicator-dot active"
+                onclick="goToHighlightSlide(0)"
+              ></span>
+              <span
+                class="indicator-dot"
+                onclick="goToHighlightSlide(1)"
+              ></span>
+              <span
+                class="indicator-dot"
+                onclick="goToHighlightSlide(2)"
+              ></span>
+              <span
+                class="indicator-dot"
+                onclick="goToHighlightSlide(3)"
+              ></span>
+              <span
+                class="indicator-dot"
+                onclick="goToHighlightSlide(4)"
+              ></span>
+              <span
+                class="indicator-dot"
+                onclick="goToHighlightSlide(5)"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE NÓS (na Home) -->
+      <section class="section about-home-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="label">
+              <div class="line"></div>
+              <span>Nossa História</span>
+            </div>
+            <h2>SOBRE NÓS</h2>
+            <p>Conheça a A.sCountry e nossa tradição country</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-left reveal">
+              <h3>
+                TRADIÇÃO<br />CONSTRUÍDA <span class="gold">COM PAIXÃO</span>
+              </h3>
+              <p>
+                A A.sCountry é uma loja física localizada em São Jerônimo da
+                Serra – PR. Atuamos com foco em produtos de qualidade,
+                atendimento direto e confiança.
+              </p>
+              <p>
+                Nosso objetivo é levar o verdadeiro estilo country para quem
+                vive o campo e para quem carrega essa identidade no dia a dia.
+                Trabalhamos com as melhores marcas e produtos selecionados.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Produtos de Alta Qualidade</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Atendimento Personalizado</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Tradição Country Autêntica</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Variedade de Produtos</span>
+                </div>
+              </div>
+
+              <div class="cta-row">
+                <a
+                  href="https://wa.me/5543999056364"
+                  target="_blank"
+                  class="btn btn--gold"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  Falar Conosco
+                </a>
+                <a
+                  href="#"
+                  onclick="
+                    showPage('produtos');
+                    return false;
+                  "
+                  class="btn btn--outline"
+                >
+                  <i class="fas fa-shopping-bag"></i>
+                  Ver Produtos
+                </a>
+              </div>
+            </div>
+
+            <div class="about-right reveal">
+              <div class="about-image">
+                <img
+                  src="uploads/loja.png"
+                  alt="Fachada da loja AsCountry"
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<div class=\'image-placeholder\'><i class=\'fas fa-store\'></i><p>AsCountry</p></div>'
+                  "
+                />
+              </div>
+              <div class="about-info-grid">
+                <div class="info-card">
+                  <div class="info-icon">📍</div>
+                  <h4>Localização</h4>
+                  <p>
+                    Rua Cláudio Ferreira da Costa, nº 149<br />São Jerônimo da
+                    Serra - PR
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">🕐</div>
+                  <h4>Horário</h4>
+                  <p>Segunda a Sexta<br />09:00 às 18:00</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">📞</div>
+                  <h4>Telefone</h4>
+                  <p>(43) 99905-6364</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">📸</div>
+                  <h4>Instagram</h4>
+                  <p>@as.country_ofc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="cta-final">
+        <div class="cta-final-inner reveal">
+          <h2>VISITE NOSSA <span class="gold">LOJA FÍSICA</span></h2>
+          <p>
+            Estamos em São Jerônimo da Serra - PR, prontos para atendê-lo com
+            produtos de qualidade e atendimento personalizado.
+          </p>
+          <div class="btn-row">
+            <a
+              href="https://wa.me/5543999056364"
+              target="_blank"
+              class="btn btn--gold"
+            >
+              <i class="fab fa-whatsapp"></i>
+              Falar no WhatsApp
+            </a>
+            <a
+              href="#"
+              onclick="
+                showPage('contato');
+                return false;
+              "
+              class="btn btn--outline"
+            >
+              📍 Ver Endereço
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: PRODUTOS -->
+    <div id="page-produtos" class="page">
+      <section class="section products-section">
+        <div class="container">
+          <div class="page-header">
+            <button class="back-btn" onclick="showPage('home')">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="section-head">
+              <div class="label">
+                <div class="line"></div>
+                <span>Nosso Catálogo</span>
+              </div>
+              <h2>PRODUTOS</h2>
+              <p>Escolha por categoria e adicione ao carrinho</p>
+            </div>
+          </div>
+
+          <div class="category-filter">
+            <button
+              class="category-btn active"
+              data-category="todos"
+              onclick="renderProducts('todos')"
+            >
+              <i class="fas fa-th"></i>
+              <span>Todos</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="chapeus"
+              onclick="renderProducts('chapeus')"
+            >
+              <i class="fas fa-hat-cowboy"></i>
+              <span>Chapéus</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="botas"
+              onclick="renderProducts('botas')"
+            >
+              <i class="fas fa-shoe-prints"></i>
+              <span>Botas</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="cintos"
+              onclick="renderProducts('cintos')"
+            >
+              <i class="fas fa-gem"></i>
+              <span>Cintos</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="camisas"
+              onclick="renderProducts('camisas')"
+            >
+              <i class="fas fa-tshirt"></i>
+              <span>Camisas</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="camisas-femininas"
+              onclick="renderProducts('camisas-femininas')"
+            >
+              <i class="fas fa-user-tie"></i>
+              <span>Camisas Femininas</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="calcas"
+              onclick="renderProducts('calcas')"
+            >
+              <i class="fas fa-person"></i>
+              <span>Calças</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="calcas-femininas"
+              onclick="renderProducts('calcas-femininas')"
+            >
+              <i class="fas fa-user"></i>
+              <span>Calças Femininas</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="acessorios"
+              onclick="renderProducts('acessorios')"
+            >
+              <i class="fas fa-ring"></i>
+              <span>Acessórios</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="camisetas"
+              onclick="renderProducts('camisetas')"
+            >
+              <i class="fas fa-tshirt"></i>
+              <span>Camisetas</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="bones"
+              onclick="renderProducts('bones')"
+            >
+              <i class="fas fa-hat-cowboy"></i>
+              <span>Bonés</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="palheiros"
+              onclick="renderProducts('palheiros')"
+            >
+              <i class="fas fa-leaf"></i>
+              <span>Palheiros</span>
+            </button>
+            <button
+              class="category-btn"
+              data-category="ervas-terere"
+              onclick="renderProducts('ervas-terere')"
+            >
+              <i class="fas fa-mug-hot"></i>
+              <span>Ervas de Tereré</span>
+            </button>
+          </div>
+
+          <div class="product-catalog" id="productCatalog">
+            <!-- ======================================== -->
+            <!-- PRODUTOS - ADICIONE AQUI! -->
+            <!-- ======================================== -->
+            <!-- Para adicionar produto: copie um bloco abaixo e edite -->
+            <!-- Categorias: chapeus, botas, cintos, camisas, camisas-femininas, calcas, calcas-femininas, acessorios -->
+
+            <!-- CHAPÉU 1 -->
+            <div class="catalog-item" data-id="1" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/chapeu-pralana.png"
+                  alt="Chapéu Country Tradicional"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Country Tradicional</h3>
+                <p>Chapéu Pralana alta qualidade, modelo clássico country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CHAPÉU 2 -->
+            <div class="catalog-item" data-id="2" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/chapeu2.jpg"
+                  alt="Chapéu Texano Premium"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Texano Premium</h3>
+                <p>Chapéu texano em feltro premium, acabamento refinado</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CHAPÉU 3 -->
+            <div class="catalog-item" data-id="3" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/chapeu3.jpg"
+                  alt="Chapéu de Palha"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu de Palha Country</h3>
+                <p>Chapéu de palha natural, ideal para o campo</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- BOTA 2 -->
+            <div class="catalog-item" data-id="5" data-category="botas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Botas/BotaTexanaMasculina.jpeg"
+                  alt="Bota Texana Premium"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Bota Texana Premium</h3>
+                <p>Bota texana com detalhes Americanos</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- BOTA 3 -->
+            <div class="catalog-item" data-id="6" data-category="botas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Botas/BotaTexanaMasculina-Jump.jpeg"
+                  alt="Bota de Rodeio"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Bota Texana - Solado Jump</h3>
+                <p>Bota texana estilo country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="6" data-category="botas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Botas/BotaTexanaMasculina-Jump-courodeavestruz.jpeg"
+                  alt="Bota de Rodeio"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Bota Texana - Solado Jump</h3>
+                <p>Bota texana estilo country - Couro de Avestruz</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="6" data-category="botas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Botas/coturno adventure.jpeg"
+                  alt="Bota de Rodeio"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Botina Texana</h3>
+                <p>
+                  Botina texana estilo country - Ideal para uso diário e eventos
+                  rurais
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="6" data-category="botas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Botas/botina texana.jpeg"
+                  alt="Coturno Adventure"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Coturno Adventure - Estilo Pro dia a dia</h3>
+                <p>
+                  Coturno Adventure - Solado robusto para trilhas e aventuras
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CINTO 1 -->
+            <div class="catalog-item" data-id="7" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Acessórios/cinto1.jpg"
+                  alt="Cinto de Couro Premium"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto de Couro Premium</h3>
+                <p>Cinto em couro premium com fivela trabalhada</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CINTO 2 -->
+            <div class="catalog-item" data-id="8" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Acessórios/cinto2.jpg"
+                  alt="Cinto Rústico Artesanal"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Rústico Artesanal</h3>
+                <p>Cinto artesanal em couro rústico com detalhes</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CINTO 3 -->
+            <div class="catalog-item" data-id="9" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Acessórios/cinto3.jpg"
+                  alt="Cinto com Fivela Texana"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto com Fivela Texana</h3>
+                <p>Cinto largo com fivela grande estilo texano</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 1 -->
+            <div class="catalog-item" data-id="10" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/camisas/camisa king farm - destaque.jpeg"
+                  alt="Camisa Country King Farm"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 2 -->
+            <div class="catalog-item" data-id="11" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/camisa-kingfarm-mas 2.jpeg"
+                  alt="Camisa Country KingFarm"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 3 -->
+            <div class="catalog-item" data-id="12" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/camisa-kingfarm-mas 3.jpeg"
+                  alt="Camisa Country King Farm"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Social Country KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="13" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/camisas/camisa-kingfarm-slim-masc.jpeg"
+                  alt="Camisa Country King Farm"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country King Farm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 2 -->
+            <div class="catalog-item" data-id="14" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/camisa-OxHorse-masc.jpeg"
+                  alt="Camisa Country OxHorse"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country OxHorse</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 3 -->
+            <div class="catalog-item" data-id="15" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/camisa-thankfield-masc 2.jpeg"
+                  alt="Camisa Social Country"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country ThankField</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 3 -->
+            <div class="catalog-item" data-id="16" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/camisa-thankfield-masc.jpeg"
+                  alt="Camisa Social Country"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country ThankField</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 7 -->
+            <div class="catalog-item" data-id="17" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/curta-kingfarm-masc 2.jpeg"
+                  alt="Camisa Curta Country Masculina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Curta Country Masculina KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 8 -->
+            <div class="catalog-item" data-id="18" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/curta-kingfarm-masc 3.jpeg"
+                  alt="Camisa Curta Country Masculina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Curta Country Masculina KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 9 -->
+            <div class="catalog-item" data-id="19" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/curta-kingfarm-masc 4.jpeg"
+                  alt="Camisa Curta Country KingFarm"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Curta Country KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 10 -->
+            <div class="catalog-item" data-id="20" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/curta-kingfarm-masc.jpeg"
+                  alt="Camisa Slim Fit Masculina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Curta Country KingFarm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 11 -->
+            <div class="catalog-item" data-id="21" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/curta-oxhorse-masc.jpeg"
+                  alt="Camisa Curta Masculina OxHorse"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Curta Masculina OxHorse</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA 12 -->
+            <div class="catalog-item" data-id="22" data-category="camisas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/curta-oxhorse-masc 2.jpeg"
+                  alt="Camisa Curta Masculina OxHorse"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Curta Masculina OxHorse</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- CAMISAS FEMININAS - 20 PRODUTOS -->
+            <!-- ======================================== -->
+
+            <!-- CAMISA FEMININA 1 -->
+            <div
+              class="catalog-item"
+              data-id="100"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem.jpeg"
+                  alt="Camisa Country Feminina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA FEMININA 2 -->
+            <div
+              class="catalog-item"
+              data-id="101"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 2.jpeg"
+                  alt="Camisa Social Feminina Country"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Social Feminina Country Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA FEMININA 3 -->
+            <div
+              class="catalog-item"
+              data-id="102"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 3.jpeg"
+                  alt="Camisa Feminina Premium Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country Feminina Premium Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA FEMININA 4 -->
+            <div
+              class="catalog-item"
+              data-id="103"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 4.jpeg"
+                  alt="Camisa Feminina Manga Curta"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Country Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA FEMININA 5 -->
+            <div
+              class="catalog-item"
+              data-id="104"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 5.jpeg"
+                  alt="Camisa Feminina com Franjas"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Country Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAMISA FEMININA 6 -->
+            <div
+              class="catalog-item"
+              data-id="105"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 6.jpeg"
+                  alt="Camisa Jeans Feminina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Country Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA 1 -->
+            <div class="catalog-item" data-id="17" data-category="calcas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calças/calca1.jpg"
+                  alt="Calça Jeans Masculina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Masculina</h3>
+                <p>Calça jeans tradicional, corte country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA 2 -->
+            <div class="catalog-item" data-id="18" data-category="calcas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calças/calca2.jpg"
+                  alt="Calça Jeans Feminina"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina</h3>
+                <p>Jeans feminino com modelagem country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA 3 -->
+            <div class="catalog-item" data-id="19" data-category="calcas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calças/calca3.jpg"
+                  alt="Calça de Couro Premium"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça de Couro Premium</h3>
+                <p>Calça em couro legítimo, estilo rodeio</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- CALÇAS FEMININAS - 20 PRODUTOS -->
+            <!-- ======================================== -->
+
+            <!-- CALÇA FEMININA 1 -->
+            <div
+              class="catalog-item"
+              data-id="200"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-01.jpg"
+                  alt="Calça Jeans Feminina Skinny"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Skinny</h3>
+                <p>Calça jeans skinny com modelagem ajustada</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 2 -->
+            <div
+              class="catalog-item"
+              data-id="201"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-02.jpg"
+                  alt="Calça Jeans Feminina Flare"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Flare</h3>
+                <p>Calça jeans flare estilo country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 3 -->
+            <div
+              class="catalog-item"
+              data-id="202"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-03.jpg"
+                  alt="Calça Jeans Feminina Bootcut"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Bootcut</h3>
+                <p>Calça bootcut tradicional country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 4 -->
+            <div
+              class="catalog-item"
+              data-id="203"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-04.jpg"
+                  alt="Calça Jeans Feminina Reta"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Reta</h3>
+                <p>Calça jeans reta com cintura alta</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 5 -->
+            <div
+              class="catalog-item"
+              data-id="204"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-05.jpg"
+                  alt="Calça Jeans Feminina Destroyed"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Destroyed</h3>
+                <p>Calça jeans com efeito destroyed moderno</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 6 -->
+            <div
+              class="catalog-item"
+              data-id="205"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-06.jpg"
+                  alt="Calça Jeans Feminina Wide Leg"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Wide Leg</h3>
+                <p>Calça wide leg com modelagem ampla</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 7 -->
+            <div
+              class="catalog-item"
+              data-id="206"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-07.jpg"
+                  alt="Calça Jeans Feminina Mom"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Mom</h3>
+                <p>Calça mom jeans estilo retrô country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 8 -->
+            <div
+              class="catalog-item"
+              data-id="207"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-08.jpg"
+                  alt="Calça Jeans Feminina com Bordados"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina com Bordados</h3>
+                <p>Calça jeans com bordados country exclusivos</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 9 -->
+            <div
+              class="catalog-item"
+              data-id="208"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-09.jpg"
+                  alt="Calça Jeans Feminina Premium"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Premium</h3>
+                <p>Calça jeans premium com acabamento especial</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 10 -->
+            <div
+              class="catalog-item"
+              data-id="209"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-10.jpg"
+                  alt="Calça Jeans Feminina Cintura Alta"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Cintura Alta</h3>
+                <p>Calça jeans cintura alta com modelagem perfeita</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 11 -->
+            <div
+              class="catalog-item"
+              data-id="210"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-11.jpg"
+                  alt="Calça Jeans Feminina com Detalhes"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina com Detalhes</h3>
+                <p>Calça jeans com detalhes em metal e couro</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 12 -->
+            <div
+              class="catalog-item"
+              data-id="211"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-12.jpg"
+                  alt="Calça Jeans Feminina Estonada"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Estonada</h3>
+                <p>Calça jeans estonada com lavagem especial</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 13 -->
+            <div
+              class="catalog-item"
+              data-id="212"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-13.jpg"
+                  alt="Calça Jeans Feminina Comfort"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Comfort</h3>
+                <p>Calça jeans comfort com elastano e conforto</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 14 -->
+            <div
+              class="catalog-item"
+              data-id="213"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-14.jpg"
+                  alt="Calça Jeans Feminina Tradicional"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Tradicional</h3>
+                <p>Calça jeans tradicional de alta qualidade</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 15 -->
+            <div
+              class="catalog-item"
+              data-id="214"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-15.jpg"
+                  alt="Calça Jeans Feminina Cropped"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Cropped</h3>
+                <p>Calça jeans cropped moderna e versátil</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 16 -->
+            <div
+              class="catalog-item"
+              data-id="215"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-16.jpg"
+                  alt="Calça Jeans Feminina com Cinto"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina com Cinto</h3>
+                <p>Calça jeans com cinto incluso em couro</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 17 -->
+            <div
+              class="catalog-item"
+              data-id="216"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-17.jpg"
+                  alt="Calça Jeans Feminina Rasgada"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Rasgada</h3>
+                <p>Calça jeans rasgada com estilo descolado</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 18 -->
+            <div
+              class="catalog-item"
+              data-id="217"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-18.jpg"
+                  alt="Calça Jeans Feminina Claro"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Claro</h3>
+                <p>Calça jeans em tonalidade clara e moderna</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 19 -->
+            <div
+              class="catalog-item"
+              data-id="218"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-19.jpg"
+                  alt="Calça Jeans Feminina Escura"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Escura</h3>
+                <p>Calça jeans em tonalidade escura elegante</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CALÇA FEMININA 20 -->
+            <div
+              class="catalog-item"
+              data-id="219"
+              data-category="calcas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Calcas-Femininas/calca-fem-20.jpg"
+                  alt="Calça Jeans Feminina Luxo"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Calça Jeans Feminina Luxo</h3>
+                <p>Calça jeans premium de luxo com acabamento perfeito</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ACESSÓRIO 1 -->
+            <div class="catalog-item" data-id="20" data-category="acessorios">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Acessórios/acessorio1.jpg"
+                  alt="Fivela Country Premium"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Fivela Country Premium</h3>
+                <p>Fivela trabalhada em metal, design country</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ACESSÓRIO 2 -->
+            <div class="catalog-item" data-id="21" data-category="acessorios">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Acessórios/acessorio2.jpg"
+                  alt="Carteira de Couro"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Carteira de Couro</h3>
+                <p>Carteira em couro legítimo com gravação</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ACESSÓRIO 3 -->
+            <div class="catalog-item" data-id="22" data-category="acessorios">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Acessórios/acessorio3.jpg"
+                  alt="Lenço Country"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Lenço Country</h3>
+                <p>Lenço tradicional em tecido de qualidade</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- ADICIONE NOVOS PRODUTOS AQUI -->
+            <!-- ======================================== -->
+
+            <!-- ===== CHAPÉUS - NOVOS ===== -->
+            <div class="catalog-item" data-id="301" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/Chap%C3%A9u%20Mundial%20de%20Fibra%20Entalhada.jpg"
+                  alt="Chapéu Mundial de Fibra Entalhada"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Mundial de Fibra Entalhada</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="302" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/Chap%C3%A9u%20Mundial%20de%20Fibra.jpg"
+                  alt="Chapéu Mundial de Fibra"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Mundial de Fibra</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="303" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/Chap%C3%A9u%20Mundial%20Embaixador%20-%20Marrom.jpg"
+                  alt="Chapéu Mundial Embaixador - Marrom"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Mundial Embaixador - Marrom</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="304" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/Chap%C3%A9u%20Mundial%20Embaixador%20-%20Preto.jpg"
+                  alt="Chapéu Mundial Embaixador - Preto"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Mundial Embaixador - Preto</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="305" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/Chap%C3%A9u%20Mundial%20Feltro%20-%20Marrom.jpg"
+                  alt="Chapéu Mundial Feltro - Marrom"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Mundial Feltro - Marrom</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="306" data-category="chapeus">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Chap%C3%A9us/Chap%C3%A9u%20Mundial%20Feltro%20-%20Preto.jpg"
+                  alt="Chapéu Mundial Feltro - Preto"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Chapéu Mundial Feltro - Preto</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ===== CINTOS - NOVOS ===== -->
+            <div class="catalog-item" data-id="400" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Marrom%20-%20Liso.jpg"
+                  alt="Cinto Pirâmide Marrom - Liso"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Marrom - Liso</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="401" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Baralho.jpg"
+                  alt="Cinto Pirâmide Baralho"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Baralho</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="402" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Entalhado%20Cru.jpg"
+                  alt="Cinto Pirâmide Entalhado Cru"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Entalhado Cru</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="403" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Entalhado%20Marrom%20Caf%C3%A9.jpg"
+                  alt="Cinto Pirâmide Entalhado Marrom Café"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Entalhado Marrom Café</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="404" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Entalhado%20Marrom%20Claro.jpg"
+                  alt="Cinto Pirâmide Entalhado Marrom Claro"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Entalhado Marrom Claro</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="405" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Entalhado.jpg"
+                  alt="Cinto Pirâmide Entalhado"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Entalhado</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="406" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Feminino%20com%20Pedras.jpg"
+                  alt="Cinto Pirâmide Feminino com Pedras"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Feminino com Pedras</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="407" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Feminino%20Couro%20Ex%C3%B3tico.jpg"
+                  alt="Cinto Pirâmide Feminino Couro Exótico"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Feminino Couro Exótico</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="408" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Feminino%20marrom%20com%20P.jpg"
+                  alt="Cinto Pirâmide Feminino Marrom com Pedras"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Feminino Marrom com Pedras</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="409" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Feminino%20Preto%20com%20Pedr.jpg"
+                  alt="Cinto Pirâmide Feminino Preto com Pedras"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Feminino Preto com Pedras</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="410" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Feminino%20Transado.jpg"
+                  alt="Cinto Pirâmide Feminino Transado"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Feminino Transado</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="411" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Preto%20liso.jpg"
+                  alt="Cinto Pirâmide Preto Liso"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Preto Liso</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="412" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Preto.jpg"
+                  alt="Cinto Pirâmide Preto"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Preto</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="413" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Transado%20B%C3%B3ton.jpg"
+                  alt="Cinto Pirâmide Transado Bóton"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Transado Bóton</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="414" data-category="cintos">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Cintos/Cinto%20Pir%C3%A2mide%20Transado.jpg"
+                  alt="Cinto Pirâmide Transado"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Cinto Pirâmide Transado</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ===== CAMISAS FEMININAS - NOVOS ===== -->
+            <div
+              class="catalog-item"
+              data-id="500"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 2.jpeg"
+                  alt="Camisa Feminina Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="501"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 3.jpeg"
+                  alt="Camisa Feminina Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="502"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 4.jpeg"
+                  alt="Camisa Feminina Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="503"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 5.jpeg"
+                  alt="Camisa Feminina Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="504"
+              data-category="camisas-femininas"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisas/fem/camisa-aurochs-fem 6.jpeg"
+                  alt="Camisa Feminina Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camisa Feminina Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ===== CAMISETAS ===== -->
+            <div class="catalog-item" data-id="600" data-category="camisetas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisetas/Camisetas Aurochs.jpg"
+                  alt="Camiseta Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camiseta Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="601" data-category="camisetas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisetas/Camisetas Fielder.jpg"
+                  alt="Camiseta Fielder"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camiseta Fielder</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="602" data-category="camisetas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisetas/Camisetas Hunder.jpg"
+                  alt="Camiseta Hunder"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camiseta Hunder</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="603" data-category="camisetas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisetas/Camisetas King Farm.jpg"
+                  alt="Camiseta King Farm"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camiseta King Farm</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="604" data-category="camisetas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisetas/Camisetas OxHorns.jpg"
+                  alt="Camiseta OxHorns"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camiseta OxHorns</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="605" data-category="camisetas">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Camisetas/Camisetas ThankField.jpg"
+                  alt="Camiseta ThankField"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Camiseta ThankField</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ===== BONÉS ===== -->
+            <div class="catalog-item" data-id="700" data-category="bones">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Bon%C3%A9s/Bon%C3%A9%20King%20Farm%20-%20Verde.jpg"
+                  alt="Boné King Farm - Verde"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Boné King Farm - Verde</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="701" data-category="bones">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Bon%C3%A9s/Bon%C3%A9%20King%20Farm%20-%20Roxo.jpg"
+                  alt="Boné King Farm - Roxo"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Boné King Farm - Roxo</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="702" data-category="bones">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Bon%C3%A9s/Bon%C3%A9%20Aurochs.jpg"
+                  alt="Boné Aurochs"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Boné Aurochs</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="703" data-category="bones">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Bon%C3%A9s/Bon%C3%A9%20Ariat%20-%20Azul.jpg"
+                  alt="Boné Ariat - Azul"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Boné Ariat - Azul</h3>
+                <p>
+                  ⚠️ Verifique tamanhos e modelos disponíveis com o vendedor.
+                </p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ===== PALHEIROS ===== -->
+            <div class="catalog-item" data-id="800" data-category="palheiros">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Palheiros/Palheiro Jack Paiols.jpg"
+                  alt="Palheiro Jack Paiols"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Palheiro Jack Paiols</h3>
+                <p>Palheiro nacional de qualidade.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="801" data-category="palheiros">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Palheiros/Palheiro Jaguara - Premium com Piteira.jpg"
+                  alt="Palheiro Jaguara Premium com Piteira"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Palheiro Jaguara Premium com Piteira</h3>
+                <p>Palheiro premium com piteira inclusa.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-id="802" data-category="palheiros">
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Palheiros/Palheiro Souza Paiol.jpg"
+                  alt="Palheiro Souza Paiol"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Palheiro Souza Paiol</h3>
+                <p>Palheiro tradicional Souza Paiol.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ===== ERVAS DE TERERÉ ===== -->
+            <div
+              class="catalog-item"
+              data-id="900"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20TROTS%20BURRITO.jpg"
+                  alt="Erva de Tereré - TROTS BURRITO"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré TROTS Burrito</h3>
+                <p>Erva de tereré sabor Burrito.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="901"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20TROTS%20PURA%20FOLHA.jpg"
+                  alt="Erva de Tereré TROTS Pura Folha"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré TROTS Pura Folha</h3>
+                <p>Erva de tereré pura folha.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="902"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Copo%20de%20Terer%C3%A9%20King%20Farm%20-%20Redondo.jpg"
+                  alt="Copo de Tereré King Farm - Redondo"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Copo de Tereré King Farm - Redondo</h3>
+                <p>Copo de tereré King Farm modelo redondo.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="903"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20Ranch%20Lim%C3%A3o%20e%20Menta.jpg"
+                  alt="Erva de Tereré Ranch Limão e Menta"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré Ranch Limão e Menta</h3>
+                <p>Sabor refrescante de limão e menta.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="904"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20TROTS%20BOLDO%20E%20MENTA.jpg"
+                  alt="Erva de Tereré TROTS Boldo e Menta"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré TROTS Boldo e Menta</h3>
+                <p>Combinação de boldo com menta refrescante.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="905"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20TROTS%20LIM%C3%83O%20CAIPIRA.jpg"
+                  alt="Erva de Tereré TROTS Limão Caipira"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré TROTS Limão Caipira</h3>
+                <p>Sabor autêntico de limão caipira.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="906"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20TROTS%20MENTA%20STRONG.jpg"
+                  alt="Erva de Tereré TROTS Menta Strong"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré TROTS Menta Strong</h3>
+                <p>Menta intensa e refrescante.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="907"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20Menta%20Bruta.jpg"
+                  alt="Erva de Tereré Menta Bruta"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré Menta Bruta</h3>
+                <p>Menta bruta para um tereré tradicional.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="908"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20Ranch%20Burrito.jpg"
+                  alt="Erva de Tereré Ranch Burrito"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré Ranch Burrito</h3>
+                <p>Sabor Ranch Burrito especial.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="909"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20Ranch%20Cereja%20Ice.jpg"
+                  alt="Erva de Tereré Ranch Cereja Ice"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré Ranch Cereja Ice</h3>
+                <p>Sabor cereja gelada refrescante.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="910"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Erva%20de%20Terer%C3%A9%20-%20Ranch%20Pura%20Folha.jpg"
+                  alt="Erva de Tereré Ranch Pura Folha"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Erva de Tereré Ranch Pura Folha</h3>
+                <p>Pureza e sabor natural da folha.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="catalog-item"
+              data-id="911"
+              data-category="ervas-terere"
+            >
+              <div class="catalog-item-image">
+                <img
+                  src="uploads/Ervas%20Terer%C3%A9/Copo%20de%20Terer%C3%A9%20King%20Farm%20-%20Quadrado.jpg"
+                  alt="Copo de Tereré King Farm - Quadrado"
+                />
+              </div>
+              <div class="catalog-item-content">
+                <h3>Copo de Tereré King Farm - Quadrado</h3>
+                <p>Copo de tereré King Farm modelo quadrado.</p>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCartFromHTML(this)"
+                >
+                  <i class="fas fa-shopping-cart"></i
+                  ><span>Adicionar ao Carrinho</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: SOBRE -->
+    <div id="page-sobre" class="page">
+      <section class="section about-section">
+        <div class="container">
+          <div class="page-header">
+            <button class="back-btn" onclick="showPage('home')">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="section-head">
+              <div class="label">
+                <div class="line"></div>
+                <span>Nossa História</span>
+              </div>
+              <h2>SOBRE A LOJA</h2>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-left reveal">
+              <h3>
+                TRADIÇÃO<br />CONSTRUÍDA <span class="gold">COM PAIXÃO</span>
+              </h3>
+              <p>
+                A AsCountry é uma loja física localizada em São Jerônimo da
+                Serra – PR. Atuamos com foco em produtos de qualidade,
+                atendimento direto e confiança.
+              </p>
+              <p>
+                Nosso objetivo é levar o verdadeiro estilo country para quem
+                vive o campo e para quem carrega essa identidade no dia a dia.
+                Trabalhamos com as melhores marcas e produtos selecionados.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Produtos de Alta Qualidade</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Atendimento Personalizado</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Tradição Country Autêntica</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Variedade de Produtos</span>
+                </div>
+              </div>
+
+              <div class="cta-row">
+                <a
+                  href="https://wa.me/5543999056364"
+                  target="_blank"
+                  class="btn btn--gold"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  Falar Conosco
+                </a>
+                <a
+                  href="#"
+                  onclick="
+                    showPage('produtos');
+                    return false;
+                  "
+                  class="btn btn--outline"
+                >
+                  <i class="fas fa-shopping-bag"></i>
+                  Ver Produtos
+                </a>
+              </div>
+            </div>
+
+            <div class="about-right reveal">
+              <div class="about-image">
+                <img
+                  src="uploads/loja.png"
+                  alt="Fachada da loja AsCountry"
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<div class=\'image-placeholder\'><i class=\'fas fa-store\'></i><p>AsCountry</p></div>'
+                  "
+                />
+              </div>
+              <div class="about-info-grid">
+                <div class="info-card">
+                  <div class="info-icon">📍</div>
+                  <h4>Localização</h4>
+                  <p>
+                    Rua Cláudio Ferreira da Costa, nº 149<br />São Jerônimo da
+                    Serra - PR
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">🕐</div>
+                  <h4>Horário</h4>
+                  <p>Segunda a Sexta<br />09:00 às 18:00</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">📞</div>
+                  <h4>Telefone</h4>
+                  <p>(43) 99905-6364</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">📸</div>
+                  <h4>Instagram</h4>
+                  <p>@as.country_ofc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: CONTATO -->
+    <div id="page-contato" class="page">
+      <section class="section contact-section">
+        <div class="container">
+          <div class="page-header">
+            <button class="back-btn" onclick="showPage('home')">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="section-head">
+              <div class="label">
+                <div class="line"></div>
+                <span>Fale com Nós</span>
+              </div>
+              <h2>VAMOS<br />CONVERSAR?</h2>
+              <p>
+                Entre em contato conosco e tire suas dúvidas sobre produtos,
+                horários e disponibilidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-left reveal">
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div class="ci-icon">📍</div>
+                  <div>
+                    <div class="ci-label">Endereço Completo</div>
+                    <div class="ci-value">
+                      Rua Cláudio Ferreira da Costa, nº 149<br />São Jerônimo da
+                      Serra, PR
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">📞</div>
+                  <div>
+                    <div class="ci-label">Telefone / WhatsApp</div>
+                    <div class="ci-value">
+                      <a href="tel:+5543999056364">(43) 99905-6364</a><br />
+                      <small style="opacity: 0.7">Clique para ligar</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">💬</div>
+                  <div>
+                    <div class="ci-label">Atendimento WhatsApp</div>
+                    <div class="ci-value">
+                      <a href="https://wa.me/5543999056364" target="_blank"
+                        >Enviar mensagem agora</a
+                      ><br />
+                      <small style="opacity: 0.7"
+                        >Resposta rápida garantida</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">📸</div>
+                  <div>
+                    <div class="ci-label">Siga nas Redes Sociais</div>
+                    <div class="ci-value">
+                      <a
+                        href="https://www.instagram.com/as.country_ofc/"
+                        target="_blank"
+                        >@as.country_ofc</a
+                      ><br />
+                      <small style="opacity: 0.7"
+                        >Acompanhe novidades e promoções</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">🕐</div>
+                  <div>
+                    <div class="ci-label">Horário de Funcionamento</div>
+                    <div class="ci-value">
+                      <strong>Segunda a Sexta</strong><br />
+                      09:00 às 18:00<br />
+                      <small style="opacity: 0.7"
+                        >Sábados e domingos fechado</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-right reveal">
+              <div class="contact-cta-card">
+                <div class="cta-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Tire suas dúvidas agora!</h3>
+                <p>
+                  Fale conosco pelo WhatsApp e receba atendimento personalizado
+                  em minutos.
+                </p>
+                <a
+                  href="https://wa.me/5543999056364"
+                  target="_blank"
+                  class="btn btn--gold btn--large"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  Abrir WhatsApp
+                </a>
+              </div>
+
+              <div class="social-row">
+                <a
+                  href="https://wa.me/5543999056364"
+                  target="_blank"
+                  class="social-btn social-btn--whatsapp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  WhatsApp
+                </a>
+                <a
+                  href="https://www.instagram.com/as.country_ofc/"
+                  target="_blank"
+                  class="social-btn social-btn--instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                  Instagram
+                </a>
+              </div>
+
+              <div class="contact-notice">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                  <strong>Atendimento Local:</strong> Nossa loja está localizada
+                  em São Jerônimo da Serra - PR. Atendemos presencialmente ou
+                  via WhatsApp para pedidos e orçamentos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3><i class="fas fa-shopping-cart"></i> Seu Carrinho</h3>
+        <button class="close-cart" onclick="toggleCart()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+          <i class="fas fa-shopping-bag"></i>
+          <p>Seu carrinho está vazio</p>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <button class="btn-whatsapp" onclick="sendToWhatsApp()">
+          <i class="fab fa-whatsapp"></i> Finalizar no WhatsApp
+        </button>
+        <button class="btn-clear" onclick="clearCart()">
+          <i class="fas fa-trash"></i> Limpar Carrinho
+        </button>
+      </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- CART FLOAT BUTTON -->
+    <button class="cart-float" onclick="toggleCart()" title="Abrir Carrinho">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="as">AS</span><span class="country">COUNTRY</span>
+        </div>
+        <p>© 2026 AsCountry — Tradição e qualidade country</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="navigation.js"></script>
+    <script src="carousel-highlights.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
